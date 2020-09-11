@@ -12,15 +12,15 @@ var tvRemote = function(word) {
     let totalClicks = 0;
     
     const findLocationOfLetter = letter => {
-      let rowNum = 0;
-      let colNum = 0;
+    //   let rowNum = 0;
+    //   let colNum = 0;
       let r = 0; c = 0;
       let found = false;
       for ( r = 0; r < map.length; r++ ) {
         for ( c = 0; c < map[r].length; c++) {
           if ( map[r][c] == letter ) {
-            rowNum = r;
-            colNum = c;
+            // rowNum = r;
+            // colNum = c;
             found = true;
             break;
           }
@@ -33,8 +33,8 @@ var tvRemote = function(word) {
     
     let letters = word.toString().split("");
     letters.forEach( letter => {
-      firstCoords =  findLocationOfLetter(firstLetter);
-      secondCoords = findLocationOfLetter(letter);
+      let firstCoords =  findLocationOfLetter(firstLetter);
+      let secondCoords = findLocationOfLetter(letter);
       firstLetter = letter;
       totalClicks = totalClicks + ( Math.abs(secondCoords[0] - firstCoords[0]) + 
                Math.abs(secondCoords[1] - firstCoords[1]) + 1 );
