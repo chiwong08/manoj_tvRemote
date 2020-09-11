@@ -12,15 +12,11 @@ var tvRemote = function(word) {
     let totalClicks = 0;
     
     const findLocationOfLetter = letter => {
-    //   let rowNum = 0;
-    //   let colNum = 0;
       let r = 0; c = 0;
       let found = false;
       for ( r = 0; r < map.length; r++ ) {
         for ( c = 0; c < map[r].length; c++) {
           if ( map[r][c] == letter ) {
-            // rowNum = r;
-            // colNum = c;
             found = true;
             break;
           }
