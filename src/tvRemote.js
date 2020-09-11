@@ -45,3 +45,5 @@ var tvRemote = function(word) {
     return totalClicks;
   }
   
+
+  module.exports = { tvRemote };
