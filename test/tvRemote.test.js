@@ -1,7 +1,6 @@
 const { tvRemote } = require("../src/tvRemote");
 
 describe("Sample Tests", () => {
-
     test("example", () => {
       expect(tvRemote("codewars")).toBe(36);
     });
